@@ -23,11 +23,10 @@ public class Car {
         if (gas >= miles) {
             setMileage(this.mileage + miles);
             setGas(this.gas - miles);
-            return miles;
         } else {
-            return 0;
+            miles = 0;
         }
-
+        return miles;
     }
 
     /**

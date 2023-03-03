@@ -1,13 +1,14 @@
 package org.example;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class MathTest {
 
     static Math math;
+
+    double delta = 1e-15;
 
     @BeforeClass
     public static void setUp() {
@@ -27,12 +28,12 @@ public class MathTest {
 
     @Test
     public void testAreaTriangle() {
-        Assert.assertEquals(6, math.areaTriangle(2,6), 1);
+        Assert.assertEquals(6, math.areaTriangle(2,6), delta);
     }
 
     @Test
     public void testAreaCircle() {
-        Assert.assertEquals(12.56637, math.areaCircle(2), 1);
+        Assert.assertEquals(12.56637, math.areaCircle(2), delta);
     }
 
     @Test
